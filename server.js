@@ -40,10 +40,10 @@ app.post('/getWeather', async (req, res) => {
 
     try {
         // API
-        const response = await axios.get('http://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_API_KEY}&q=${city}&aqi=no');     
+        const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_API_KEY}&q=${city}&aqi=no`);     
 
         // Extract weather data
-        const weather = response.data.weather[0].description; // Example: get the weather description
+        const weather = response.data.current.temp_f; // Example: get the weather description
         
         // Render page with the city & weather data
         res.render('index.ejs', { city, weather })
