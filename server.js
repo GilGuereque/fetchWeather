@@ -27,7 +27,7 @@ app.use(express.json());
 // Render page using GET function
 app.get('/', async (req, res) => {
     try {
-        res.render('index.ejs', { city: '' }); // No city data on the initial load
+        res.render('index.ejs', { city: '', weather: '' }); // Initialize both city & weather
     } catch (error) {
         console.error(error)
         res.status(500).send('500 HTTP status code. A server error has ocurred from the GET request');
