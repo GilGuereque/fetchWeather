@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
     try {
         console.log("GET / request received");
         res.render('index.ejs');
+        //res.send('Hello World!')
     } catch (error) {
         console.log(error);
         res.status(500).send('An error occurred while processing your request.')
