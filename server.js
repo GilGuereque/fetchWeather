@@ -25,8 +25,13 @@ app.use(express.json);
 
 // GET request to render index.ejs
 app.get('/', (req, res) => {
-    console.log("GET / request received");
-    res.render('index.ejs');
+    try {
+        console.log("GET / request received");
+        res.render('index.ejs');
+    } catch (error) {
+        console.log(error);
+        res.status(500).send('An error occurred while processing your request.')
+    }
 });
 
 // POST request to fetch weather data
