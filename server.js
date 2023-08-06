@@ -55,9 +55,6 @@ app.post('/getWeather', async (req, res) => {
     
 });
 
-// POST request to fetch Weather data for submitted City
-app.post('/getWeather')
-
 
 // Setting up app to listen on PORT 5500
 app.listen(process.env.PORT || PORT, () => {
