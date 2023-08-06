@@ -35,7 +35,7 @@ app.get('/', async (req, res) => {
 });
 
 // POST request to fetch City & weather data
-app.post('/getWeather', (req, res) => {
+app.post('/getWeather', async (req, res) => {
     const city = req.body.city;
 
     try {
