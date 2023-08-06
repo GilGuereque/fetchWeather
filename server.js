@@ -21,12 +21,12 @@ require('dotenv').config();
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json);
+app.use(express.json()); 
 
 // Render page using GET function
 app.get('/', async (req, res) => {
     try {
-        res.render('index.ejs', {items: todoItems, left: itemsLeft});
+        res.render('index.ejs');
     } catch (error) {
         console.error(error)
         res.status(500).send('500 HTTP status code. A server error has ocurred from the GET request');
@@ -42,5 +42,5 @@ app.post('/getWeather', (req, res) => {
 
 // Setting up app to listen on PORT 5500
 app.listen(process.env.PORT || PORT, () => {
-    console.log(`Server runnin on port ${PORT}`)
+    console.log(`Server running on port ${PORT}`)
 });
