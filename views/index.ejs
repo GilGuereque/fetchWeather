@@ -12,13 +12,13 @@
     <p>Enter the city you want to check below and click submit</p>
     <form action="/getWeather" method="POST">
         <input type="text" name="city">
-        <button class="submit" role="button">Submit</button>
+        <button type="submit" class="submit" role="button">Submit</button>
         <br>
         <br>
-        <span>City:</span>
+        <span>City: <%= city ? city : '' %></span>
         <br>
         <br>
-        <span>Current Weather:</span>
+        <span>Current Weather: <%= weather ? weather : '' %></span>
     </form>
 
     <script src="js/main.js"></script>
