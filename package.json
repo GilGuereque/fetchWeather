@@ -1,0 +1,19 @@
+{
+  "name": "fetchweather",
+  "version": "1.0.0",
+  "description": "Fetch current weather for a specific city",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GilGuereque/fetchWeather.git"
+  },
+  "author": "Gil Guereque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GilGuereque/fetchWeather/issues"
+  },
+  "homepage": "https://github.com/GilGuereque/fetchWeather#readme"
+}
