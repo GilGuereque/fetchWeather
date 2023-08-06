@@ -1,9 +1,9 @@
 const express = require('express');
 const { MongoClient } = require('mongodb');
 const app = express();
-const PORT = 5500
+const PORT = 3000;
 
-require('dotenv').config()
+require('dotenv').config();
 
 // Most likely not using this, but setting up just incase
 // let db,
