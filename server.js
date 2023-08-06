@@ -23,15 +23,13 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json);
 
-// GET request to render index.ejs
-app.get('/', (req, res) => {
+// Render page using GET function
+app.get('/', async (req, res) => {
     try {
-        console.log("GET / request received");
-        res.render('index.ejs');
-        //res.send('Hello World!')
+        res.render('index.ejs', {items: todoItems, left: itemsLeft});
     } catch (error) {
-        console.log(error);
-        res.status(500).send('An error occurred while processing your request.')
+        console.error(error)
+        res.status(500).send('500 HTTP status code. A server error has ocurred from the GET request');
     }
 });
 
