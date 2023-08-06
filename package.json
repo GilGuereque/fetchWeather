@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/GilGuereque/fetchWeather/issues"
   },
-  "homepage": "https://github.com/GilGuereque/fetchWeather#readme"
+  "homepage": "https://github.com/GilGuereque/fetchWeather#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.4.2",
+    "node": "^20.5.0"
+  }
 }
