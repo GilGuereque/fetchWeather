@@ -25,6 +25,7 @@ app.use(express.json);
 
 // GET request to render index.ejs
 app.get('/', (req, res) => {
+    console.log("GET / request received");
     res.render('index.ejs');
 });
 
