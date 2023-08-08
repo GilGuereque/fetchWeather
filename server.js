@@ -1,5 +1,5 @@
 const express = require('express');
-const { MongoClient } = require('mongodb');
+// const { MongoClient } = require('mongodb');
 const app = express();
 const PORT = 3000;
 const axios = require('axios');
@@ -27,7 +27,7 @@ app.use(express.json());
 // Render page using GET function
 app.get('/', async (req, res) => {
     try {
-        res.render('index.ejs', { city: '', weather: '' }); // Initialize both city & weather
+        res.render('index.ejs', { city: '', weather: '', conditions: '', humidity: '', region: '' }); // Initialize both city & weather
     } catch (error) {
         console.error(error)
         res.status(500).send('500 HTTP status code. A server error has ocurred from the GET request');
@@ -44,13 +44,16 @@ app.post('/getWeather', async (req, res) => {
 
         // Extract weather data
         const weather = response.data.current.temp_f; // Example: get the weather description
-        
+        const conditions = response.data.current.condition.text; // get the conditions text field
+        const humidity = response.data.current.humidity; // get humidity data
+        const region = response.data.location.region; // get region data
+
         // Render page with the city & weather data
-        res.render('index.ejs', { city, weather })
+        res.render('index.ejs', { city, weather, conditions, humidity, region })
     } catch (error) {
         console.log(error);
         // Handle the error appropriately
-        res.render('index.ejs', { city: '', weather: 'Weather data not found' });
+        res.render('index.ejs', { city: '', weather: 'Weather data not found', conditions: 'Weather conditions data not found', humidity: 'humidity data not found', region: 'region not found' });
     }
     
 });
