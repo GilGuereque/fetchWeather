@@ -19,7 +19,7 @@ h1, p, span {
 
 form {
     display: inline-block;
-    margin-top: 20px; /* adding some space above the form */
+    margin-top: 5px; /* adding some space above the form */
     background: #95a7c4; /* adding a background color */
     padding: 15px; /* adding some padding inside the form */
     border-radius: 5px; /* rounding the corners */
