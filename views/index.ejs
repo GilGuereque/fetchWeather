@@ -15,22 +15,14 @@
         <button type="submit" class="submit" role="button">Submit</button>
         <br>
         <br>
-        <span>City: <%= city ? city : '' %></span>
-        <br>
-        <br>
-        <span>Region: <%= region ? region : '' %></span>
-        <br>
-        <br>
-        <span>Current Weather: <%= weather ? weather : '' %></span>
-        <br>
-        <br>
-        <span>Conditions: <%= conditions ? conditions : '' %></span>
-        <br>
-        <br>
-        <span>Humidity: <%= humidity ? humidity : '' %></span>
-        <br>
-        <br>
-        <span>Local Time: <%= localTime ? localTime : '' %></span>
+        <div class="container">
+          <div class="item">City: <%= city ? city : '' %></div>
+          <div class="item">Current Weather: <%= weather ? weather : '' %></div>
+          <div class="item">Conditions: <%= conditions ? conditions : '' %></div>
+          <div class="item">Humidity: <%= humidity ? humidity : '' %></div>
+          <div class="item">Region: <%= region ? region : '' %></div>
+          <div class="item">Local Time: <%= localTime ? localTime : '' %></div>
+        </div>
     </form>
 
     <script src="js/main.js"></script>

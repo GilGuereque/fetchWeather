@@ -25,6 +25,17 @@ form {
     border-radius: 5px; /* rounding the corners */
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px; /* optional padding */
+}
+
 input {
     padding: 5px; /* adding some padding inside the input */
     margin-bottom: 10px; /* adding some space below the input */
@@ -72,7 +83,6 @@ button {
 } 
 */
 
-/* CSS */
 
 .submit:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
